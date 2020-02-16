@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Movie Search</title>
+  <title>Pick a Flick</title>
   <link rel="stylesheet" type="text/css" href="/public/styles/index.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
@@ -10,6 +10,16 @@
   <script src="https://kit.fontawesome.com/8a271b7eb0.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <h1>Hello World</h1>
+  <h1>Pick a Flick</h1>
+  <div class="cHeader">
+    <div class="cSearch">
+      <form id="search-form" class="cSearch-form">
+        <input type="text" class="cSearch-input" placeholder="Enter an Year" name="search-input" id="search-input">
+        <button type="submit" name="subscribe" id="search-submit" class="cSearch-button"><span class="fas fa-search"></span></button>
+      </form>
+    </div>
+  </div>
+  <div class="cResults">
+  </div>
 </body>
 </html>
