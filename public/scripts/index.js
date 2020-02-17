@@ -44,13 +44,23 @@ function displayResults(data) {
   $.each(data.results, (i, e) => {
     if (i < 10) {
       const $movie = $('<div />').addClass('cResults-movie')
-      const $title = $('<div />').addClass('.cResults-movie--title').text(e.title)
-      const $releaseDate = $('<div />').addClass('.cResults-movie--date').text(e.release_date)
       const $poster = $('<img />').addClass('.cResults-movie--poster').attr('src', `http://image.tmdb.org/t/p/w342//${e.poster_path}`)
+      const $title = $('<div />').addClass('.cResults-movie--title').text(e.title)
+
+      const date = this.displayDateString(e.release_date)
+      const $releaseDate = $('<div />').addClass('.cResults-movie--date').text(date)
+
       $poster.appendTo($movie)
       $title.appendTo($movie)
       $releaseDate.appendTo($movie)
       $movie.appendTo($resultContianer)
     }
   })
+}
+
+function displayDateString(date) {
+  const splitDate = date.split('-')
+  const dateObj = new Date(splitDate[0], splitDate[1] - 1, splitDate[2])
+  const options = { month: 'long', day: 'numeric', year: 'numeric'}
+  return dateObj.toLocaleDateString('en-US', options)
 }
