@@ -12,6 +12,7 @@ $document.ready(() => {
       return
     }
 
+    $('.cResults').empty()
     this.getResults(inputYear)
   })
 })
@@ -38,10 +39,17 @@ function getResults(year) {
 
 function displayResults(data) {
   console.log('Results', data.results)
-  $resultContianer = $('.cResults')
+  const $resultContianer = $('.cResults')
+
   $.each(data.results, (i, e) => {
     if (i < 10) {
-      const $movie = $('<div />').addClass('cResults-movie').text(e.title)
+      const $movie = $('<div />').addClass('cResults-movie')
+      const $title = $('<div />').addClass('.cResults-movie--title').text(e.title)
+      const $releaseDate = $('<div />').addClass('.cResults-movie--date').text(e.release_date)
+      const $poster = $('<img />').addClass('.cResults-movie--poster').attr('src', `http://image.tmdb.org/t/p/w342//${e.poster_path}`)
+      $poster.appendTo($movie)
+      $title.appendTo($movie)
+      $releaseDate.appendTo($movie)
       $movie.appendTo($resultContianer)
     }
   })
