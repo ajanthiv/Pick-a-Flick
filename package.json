@@ -1,0 +1,36 @@
+{
+  "name": "movie-search",
+  "version": "1.0.0",
+  "description": "Highlights top films released in any given year",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://ajanthiv@github.com/ajanthiv/movie-search.git"
+  },
+  "author": "ajanthiv",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ajanthiv/movie-search/issues"
+  },
+  "homepage": "https://github.com/ajanthiv/movie-search#readme",
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "babelify": "^10.0.0",
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-browserify": "^0.5.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-notify": "^3.2.0",
+    "gulp-sass": "^4.0.2",
+    "node-sass": "^4.13.1",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.4.1",
+    "jquery": "^3.4.1"
+  }
+}
