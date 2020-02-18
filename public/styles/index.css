@@ -92,6 +92,12 @@ input::-internal-autofill-selected {
   padding-top: 5px;
 }
 
+.cResults-empty {
+  margin: 100px auto;
+  font-family: 'Roboto Slab', serif;
+  font-size: 30px;
+}
+
 
 @media (max-width: 991.98px) { 
   .cHeader, .cSearch {
@@ -130,5 +136,9 @@ input::-internal-autofill-selected {
 
   .cResults-movie--poster {
     width: 100%;
+  }
+
+  .cResults-empty {
+    font-size: 20px;
   }
 }

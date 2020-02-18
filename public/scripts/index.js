@@ -8,11 +8,14 @@ $document.ready(() => {
     e.preventDefault()
     e.stopPropagation()
 
+    $('.cResults').empty()
+
     if (inputYear === '') {
+      const $noResults = $('<div />').addClass('cResults-empty').text('Please Enter a Year')
+      $noResults.appendTo($('.cResults'))
       return
     }
 
-    $('.cResults').empty()
     this.getResults(inputYear)
   })
 })
