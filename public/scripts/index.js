@@ -41,7 +41,6 @@ function getResults(year) {
 }
 
 function displayResults(data) {
-  console.log('Results', data.results)
   const $resultContianer = $('.cResults')
 
   $.each(data.results, (i, e) => {
