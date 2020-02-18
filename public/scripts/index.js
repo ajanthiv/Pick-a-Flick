@@ -44,11 +44,11 @@ function displayResults(data) {
   $.each(data.results, (i, e) => {
     if (i < 10) {
       const $movie = $('<div />').addClass('cResults-movie')
-      const $poster = $('<img />').addClass('.cResults-movie--poster').attr('src', `http://image.tmdb.org/t/p/w342//${e.poster_path}`)
-      const $title = $('<div />').addClass('.cResults-movie--title').text(e.title)
+      const $poster = $('<img />').addClass('cResults-movie--poster').attr('src', `http://image.tmdb.org/t/p/w342//${e.poster_path}`)
+      const $title = $('<div />').addClass('cResults-movie--title').text(e.title)
 
       const date = this.displayDateString(e.release_date)
-      const $releaseDate = $('<div />').addClass('.cResults-movie--date').text(date)
+      const $releaseDate = $('<div />').addClass('cResults-movie--date').text(date)
 
       $poster.appendTo($movie)
       $title.appendTo($movie)
