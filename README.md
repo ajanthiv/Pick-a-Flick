@@ -1,4 +1,4 @@
-# movie-search
+# Pick a Flick
 An application that highlights top films released in any given year using the The Movie Database API.
 
 ### `gulp`
